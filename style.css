@@ -9,6 +9,15 @@ footer {
 	top: 0;
 }
 
+a {
+	text-decoration: none;
+	padding: .2em 1em;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
 
 .footer { 
 	background-color: #292c2f;
@@ -18,12 +27,25 @@ footer {
 	padding: 15px;
 }
 
-* {
-	padding: 0;
+.nav {
 	margin: 0;
+	padding: 1em;
+	list-style: none;
+	text-align: center;
 }
 
-body img {
+.nav li {
+	display: inline;
+	font-family: 'Mate', serif;
+	font-size: 28px;
+	color: #fff;
+}
+
+.nav li:hover {
+	color: #A52A2A;
+}
+
+.logo {
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -31,9 +53,16 @@ body img {
 	bottom: 0;
 	right: 0;
 	animation: bounceIn 2s;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-body p {
+.logo:hover {
+	-webkit-transform:scale(1.1);
+	transform:scale(1.1);
+}
+
+.Text {
 	font-family: 'Mate', serif;
 	position: absolute;
 	color: white;
@@ -44,42 +73,6 @@ body p {
 	margin-bottom: 0px;
 	font-size: 24px;
 	animation: bounceIn 2s;
-}
-
-a {
-	text-decoration: none;
-	padding: .2em 1em;
-}
-
-body ul {
-	margin: 0;
-	padding: 1em;
-	list-style: none;
-	text-align: center;
-}
-
-body ul li {
-	display: inline;
-	font-family: 'Mate', serif;
-	font-size: 28px;
-	color: #fff;
-}
-
-body ul li a {
-	text-decoration: none;
-}
-
-body img:hover {
-	-webkit-transform:scale(1.1);
-	transform:scale(1.1);
-}
-body img {
-    -webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-
-body ul li:hover {
-	color: #A52A2A;
 }
 
 @keyframes bounceIn {
