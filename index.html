@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>uwot?</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Mate:400' rel='stylesheet' type='text/css'>
+</head>
+	<body>
+		<!--- Content -->
+		<footer class="footer">
+			<ul>
+				<a href="https://github.com/Konixz"><li>github</li></a>
+				<a href="http://blog.konixz.de"><li>blog</li></a>
+				<a href="" id="link" target="_blank" title=""><li>random shit</li></a>
+				<a href="mailto:contact@konixz.de"><li>contact</li></a>
+			</ul>
+		</footer>
+		<a href="http://konixz.de"><img src="index/img/konixz.png"></a>
+		<p>Hier ist nichts besonderes.</p>
+		<!-- Script -->
+		<script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="index/scripts/csv.js"></script>
+		<script>
+			$(document).ready(function() {
+				function getRandomInt(min, max) {
+    				return Math.floor(Math.random() * (max - min + 1)) + min;
+				}
+
+				$.get('index/scripts/links.csv', function(data) {
+					var data = $.csv.toArrays(data);
+					$('#link').attr('href',data[getRandomInt(0,data.length)][0])
+				});
+			});
+		</script>
+	</body>
+</html>
